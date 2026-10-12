@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Flask Ejemplo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mi proyecto Flask</h1>
+        <nav>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('estudiantes') }}">Estudiantes</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna consulta, puedes completar el siguiente formulario.</p>
+
+        <form id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button class="boton" type="submit">Enviar mensaje</button>
+            <p id="respuesta"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Proyecto de ejemplo con Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
