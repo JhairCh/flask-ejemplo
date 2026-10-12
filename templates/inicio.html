@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Flask Ejemplo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mi proyecto Flask</h1>
+        <nav>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('estudiantes') }}">Estudiantes</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>¡Bienvenido a Flask!</h2>
+        <p>Esta es la página principal de nuestro proyecto web.</p>
+        <p>Utiliza el menú para navegar entre las diferentes vistas.</p>
+        <a class="boton" href="{{ url_for('estudiantes') }}">Ver estudiantes</a>
+    </main>
+
+    <footer>
+        <p>Proyecto de ejemplo con Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
