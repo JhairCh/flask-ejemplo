@@ -1,19 +1,19 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def inicio():
-    return "Bienvenido a flask"
+    return render_template("inicio.html")
 
 @app.route("/estudiantes")
 def estudiantes():
-    return "Lista de estudiantes"
+    return render_template("estudiantes.html")
 
 
 @app.route("/contacto")
 def contacto():
-    return "pagina de contacto"
+    return render_template("contacto.html")
 
 
 
